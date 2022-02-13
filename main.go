@@ -158,7 +158,7 @@ func main() {
 	log.Info("Create new cron")
 	c := cron.New()
 
-	c.AddFunc("*/5 * * * * *", func() {
+	c.AddFunc("*/2 * * * * *", func() {
 		log.Infoln("RUNNING")
 		itemsList := strings.Split(*items, ",")
 		for _, url := range itemsList {
